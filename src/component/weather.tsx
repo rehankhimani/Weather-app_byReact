@@ -57,7 +57,7 @@ export default function Weather() {
             onChange={(e) => setCity(e.target.value)}
           />
           <button onClick={fetchWeather}>
-            <img src="/SearchIcon.png" alt="Search" />
+            <img src="Icons/SearchIcon.png" alt="Search" />
           </button>
         </div>
 
@@ -69,12 +69,12 @@ export default function Weather() {
 
             <div className="info-cards">
               <div className="info-card">
-                <img src="/weather.png" alt="Humidity" />
+                <img src="Icons/weather.png" alt="Humidity" />
                 <p>{weatherData.current.humidity}%</p>
                 <span>Humidity</span>
               </div>
               <div className="info-card">
-                <img src="/wind.png" alt="Wind" />
+                <img src="Icons/wind.png" alt="Wind" />
                 <p>{weatherData.current.wind_kph} km/h</p>
                 <span>Wind</span>
               </div>
