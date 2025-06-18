@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useCallback } from "react";
+import React, {  useState  } from "react";
 import "./weather.css";
 
 interface WeatherData {
