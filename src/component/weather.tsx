@@ -28,14 +28,14 @@ export default function Weather() {
       } else {
         alert("City not found");
       }
-    } catch (err) {
+    } catch (_err) {
       alert("Error fetching weather");
     }
   };
 
   useEffect(() => {
     fetchWeather();
-  }, []);
+  }, [fetchWeather]);
 
   const getBackground = () => {
     const condition = weatherData?.current.condition.text.toLowerCase() || "";
