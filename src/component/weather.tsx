@@ -31,7 +31,7 @@ const fetchWeather = async () => {
     } catch {
       alert("Error fetching weather");
     }}
-    [city];
+  
 
   useEffect(() => {
     fetchWeather();
