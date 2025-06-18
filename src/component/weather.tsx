@@ -16,7 +16,7 @@ export default function Weather() {
   const [city, setCity] = useState("Lahore");
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
 
-  const fetchWeather = useCallback(async () => {
+const fetchWeather = async () => {
     try {
       const API_KEY = "0fd51a59be544521a41130012251205";
       const response = await fetch(
@@ -30,12 +30,12 @@ export default function Weather() {
       }
     } catch {
       alert("Error fetching weather");
-    }
-  }, [city]);
+    }}
+    [city];
 
   useEffect(() => {
     fetchWeather();
-  }, [fetchWeather]);
+  }, []);
 
   const getBackground = () => {
     const condition = weatherData?.current.condition.text.toLowerCase() || "";
