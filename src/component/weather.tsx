@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./weather.css";
 
 interface WeatherData {
@@ -16,7 +16,7 @@ export default function Weather() {
   const [city, setCity] = useState("Lahore");
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
 
-  const fetchWeather = async () => {
+  const fetchWeather = useCallback(async () => {
     try {
       const API_KEY = "0fd51a59be544521a41130012251205";
       const response = await fetch(
@@ -28,10 +28,10 @@ export default function Weather() {
       } else {
         alert("City not found");
       }
-    } catch (_err) {
+    } catch {
       alert("Error fetching weather");
     }
-  };
+  }, [city]);
 
   useEffect(() => {
     fetchWeather();
