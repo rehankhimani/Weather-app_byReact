@@ -33,10 +33,7 @@ const fetchWeather = async () => {
     }}
     [city];
 
-  // useEffect(() => {
-  //   fetchWeather();
-  // }, []);
-
+  
   const getBackground = () => {
     const condition = weatherData?.current.condition.text.toLowerCase() || "";
     if (condition.includes("rain")) return "rain.jpg";
