@@ -33,9 +33,9 @@ const fetchWeather = async () => {
     }}
     [city];
 
-  useEffect(() => {
-    fetchWeather();
-  }, []);
+  // useEffect(() => {
+  //   fetchWeather();
+  // }, []);
 
   const getBackground = () => {
     const condition = weatherData?.current.condition.text.toLowerCase() || "";
